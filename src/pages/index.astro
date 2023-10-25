@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+<script>
+	const btnOpen = document.getElementById('open');
+	const btnClose = document.getElementById('close');
+	const menuNav = document.getElementById('menuNav');
+	const bgMenu = document.getElementById('bgMenu');
+	const btnLinks = document.querySelectorAll('.btnLinks');
+	const logo = document.getElementById('Capa_1');
+
+	const openMenu = () =>{
+		btnClose.classList.replace('scale-100','scale-0');
+		btnClose.classList.replace('block','hidden');
+		btnOpen.classList.replace('scale-0','scale-100');
+		btnOpen.classList.replace('hidden','block');
+		menuNav.classList.replace('translate-x-full','translate-x-0');
+		bgMenu.classList.replace('bg-transparent','bg-[--bg-one]');
+		bgMenu.classList.replace('backdrop:blur-0','backdrop:blur-2xl');
+	}
+
+	const closeMenu = () =>{
+		btnClose.classList.replace('scale-0','scale-100');
+		btnClose.classList.replace('hidden','block');
+		btnOpen.classList.replace('scale-100','scale-0');
+		btnOpen.classList.replace('block','hidden');
+		menuNav.classList.replace('translate-x-0','translate-x-full');
+		bgMenu.classList.replace('bg-[--bg-one]','bg-transparent');
+		bgMenu.classList.replace('backdrop:blur-2xl','backdrop:blur-0');
+	}
+
+	btnClose.addEventListener('click', openMenu);
+
+	btnOpen.addEventListener('click', closeMenu);
+
+	btnLinks.forEach(link =>{
+		link.addEventListener('click', closeMenu)
+	})
+
+
+</script>
+
+<Layout title="Nivek Studio">
+	
+	<header id="home" class="flex flex-col relative z-0 h-[100dvh] w-screen overflow-hidden">
+		<span class="absolute bg-black/60 z-10 h-full w-full "></span>
+		<video src="/video.webm" class="absolute object-cover object-left-top h-full w-full " autoplay loop muted></video>
+		<nav class="py-3 px-5 h-20 w-full sticky top-0 flex justify-center items-center z-50 transition-transform duration-300">
+			<picture class="h-full w-full">
+				<img class="h-full w-auto p-2" src="/logo.svg" alt="">
+			</picture>
+			<i class="h-16 w-16 flex justify-center items-center">
+				<a class="relative flex justify-center items-center h-full w-full transition-transform duration-300" href="#">
+					<svg id="close" class="absolute z-50 transition-transform duration-300 overflow-hidden rounded-full bg-transparent p-1 scale-100 block" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M4 6l16 0"></path>
+						<path d="M4 12l16 0"></path>
+						<path d="M4 18l16 0"></path>
+					 </svg>
+					 <svg id="open" class="absolute z-50 transition-transform duration-300 overflow-hidden rounded-full bg-white/30 backdrop-blur-xl hidden p-1 scale-0" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+						<path d="M18 6l-12 12"></path>
+						<path d="M6 6l12 12"></path>
+					 </svg>
+				</a>
+			</i>
+		</nav>
+		<span id="bgMenu" class="absolute bg-transparent backdrop:blur-2xl transition duration-300 z-10 h-full w-full"></span>
+		<nav id="menuNav" class="absolute h-full w-full z-30 flex justify-center items-center bg-[--primary-color-one/20] translate-x-full transition-transform duration-300">
+			
+			<ul class="flex flex-col justify-center items-center bg-[--primary-color-one] rounded-md text-current max-h-[80%] max-w-[90%] w-[80%] overflow-hidden [&>li]:w-full [&>li>a]:w-full [&>li>a]:text-center [&>li>a]:block [&>li>a]:py-5 [&>li>a]:px-10 [&>li>a]:text-2xl [&>li]:min-h-fit active:[&>li>a]:bg-[--secondary-color-one]">
+				<li><a class="btnLinks" href="#home">Home</a></li>
+				<li><a class="btnLinks" href="#visual">Visual</a></li>
+				<li><a class="btnLinks" href="#marketing">Marketing</a></li>
+				<li><a class="btnLinks" href="#events">Events</a></li>
+				<li><a class="btnLinks" href="#apps">Apps</a></li>
+			</ul>
+			
+		</nav>
+			
+		<main class="absolute z-20 h-[100dvh] w-full flex flex-col justify-between items-center">
+			<div class="absolute top-20 text-center mt-10 px-7">
+				<h1 class="text-5xl my-5">Nivek <strong class="text-[--secondary-color-one]">Studio</strong></h1>
+				<p class="text-xl">Registra tu <strong class="text-[--secondary-color-one]">marca</strong> con nuestros profesionales y asegura el futuro de tu negocio.</p>
+			</div>
+			<div class="absolute flex flex-col bottom-0 my-10 gap-5">
+				<a class="py-5 px-10 text-[--primary-color one] bg-white/20 backdrop:blur-xl rounded-md border-2 border-white hover:bg-[--primary-color-one] hover:text-white transition-colors duration-300" href="#">Call to action</a>
+				<a class="py-5 px-10 text-[--primary-color one] bg-white/20 backdrop:blur-xl rounded-md border-2 border-white hover:bg-[--primary-color-one] hover:text-white transition-colors duration-300" href="#">Call to action</a>
+			</div>
+
+		</main>
+	</header>
+	<section id="visual">
+		<h1 class="text-5xl my-5 text-[--secondary-color-one]">Visual</h1>
+	</section>
+
+</Layout>
+
+<style>
+	
+</style>
