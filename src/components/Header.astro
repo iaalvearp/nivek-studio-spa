@@ -1,0 +1,90 @@
+---
+import LinkMenu from '../components/LinkMenu.astro';
+import CallToAction from '../components/CallToAction.astro';
+
+---
+
+<header class="min-h-[32rem] h-screen w-full text-[--secundary-color] bg-gradient-to-b from-black/40 to-[--bg-one]">
+    <nav id="nav" class="mx-auto w-4/5 max-w-[75rem] overflow-hidden py-10 grid justify-between items-center grid-cols-[max-content_max-content] md:flex md:justify-between">
+        <h2 class="text-4xl font-bold row-start-1 row-end-2 z-20">Nivek</h2>
+        <ul id="menuLinks" class="absolute bg-[--secundary-color-one] inset-0 z-10 grid content-center gap-6 pl-10 text-xl tracking-wide duration-300 md:pl-0 md:bg-[unset] md:static md:flex  md:gap-5 md:duration-0">
+            <LinkMenu href="#home">Home</LinkMenu>
+            <LinkMenu href="#visual">Visual</LinkMenu>
+            <LinkMenu href="#marketing">Marketing</LinkMenu>
+            <LinkMenu href="#events">Events</LinkMenu>
+            <LinkMenu href="#apps">Apps</LinkMenu>
+        </ul>
+        <a href="#nav" id="btnHam" class="cursor-pointer col-start-[-2] col-end-[-1] row-start-1 row-end-2  transition-transform duration-300 z-20 md:hidden">
+            <svg width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 6l16 0"></path>
+                <path d="M4 12l16 0"></path>
+                <path d="M4 18l16 0"></path>
+             </svg>
+        </a>
+        <a href="#" id="closeMenu" class="cursor-pointer col-start-[-2] col-end-[-1] row-start-1 row-end-2  transition-transform duration-300 z-20 md:hidden">
+            <svg width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M18 6l-12 12"></path>
+                <path d="M6 6l12 12"></path>
+             </svg>
+        </a>
+    </nav>
+    <div class="relative w-4/5 my-4 mx-auto grid justify-items-center grid-rows-[min-content_1fr_min-content] max-h-[38rem] min-h-[35rem] gap-4 md:h-full md:max-h-full">
+        <h1 class="lg:text-6xl text-6xl text-center">Nivek <strong class=" text-[--primary-color-one]">Studio</strong></h1>
+        <p class="text-xl text-[--secundary-color] text-center">Registra tu <strong class="text-[--primary-color-one]">marca</strong> con nuestros profesionales y asegura el futuro de tu negocio.</p>
+        <div class="grid gap-4 md:absolute md:w-full md:bottom-60 md:flex justify-center">
+            <CallToAction href="#">Call To Action</CallToAction>
+            <CallToAction href="#">Call To Action</CallToAction>
+        </div>
+    </div>
+    <video src="/video.webm" class="absolute object-cover object-left-top h-full w-full top-0 -z-10" autoplay loop muted></video>
+</header>
+
+<style>
+    video {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%, 0 90%);
+    }
+
+    #nav {
+        --open-menu: scale(1);
+        --close-menu: scale(0);
+        --state-menu: translateX(-100%);
+    }
+    #btnHam{
+        transform: var(--open-menu);
+    }
+    #closeMenu {
+        transform: var(--close-menu);
+    }
+    #menuLinks{
+        transform: var(--state-menu);
+    }
+    #nav:target{
+        --state-menu: translateX(0);
+        --open-menu: scale(0);
+        --close-menu: scale(1);
+    }
+
+    @media (min-width:768px) {
+        #nav {
+        --open-menu: scale(0);
+        --close-menu: scale(0);
+        --state-menu: translateX(0);
+        }
+        #btnHam{
+            transform: var(--open-menu);
+        }
+        #closeMenu {
+            transform: var(--close-menu);
+        }
+        #menuLinks{
+            transform: var(--state-menu);
+        }
+        #nav:target{
+            --state-menu: translateX(0);
+            --open-menu: scale(0);
+            --close-menu: scale(0);
+        }
+    }
+</style>
