@@ -2,15 +2,15 @@
 const {href} = Astro.props;
 ---
 
-<li class="lg:flex lg:flex-col lg:justify-between lg:overflow-hidden">
-    <span class="lg:h-1 lg:w-full lg:bg-current lg:transition-transform lg:duration-300"></span>
-    <a class="btnLinks lg:transition-colors lg:duration-300" href={href}><slot></a>
-    <span class="lg:h-1 lg:w-full lg:bg-current lg:transition-transform lg:duration-300"></span>
+<li class="md:flex md:flex-col md:justify-between md:overflow-hidden">
+    <span class="md:h-1 md:w-full md:bg-current md:transition-transform md:duration-300"></span>
+    <a class="btnLinks md:transition-colors md:duration-300 py-2" href={href}><slot></a>
+    <span class="md:h-1 md:w-full md:bg-current md:transition-transform md:duration-300"></span>
 </li>
 
 <style>
     li>span{
-		transform: translateX(-101%);
+		transform: translateX(-105%);
 	}
 	li:hover>span{
 		transform: translateX(0);

@@ -1,0 +1,84 @@
+---
+import VisualCard from '../components/VisualCard.astro'
+import CallToActionCurrent from '../components/CallToActionCurrent.astro'
+
+---
+
+
+    <section id="visual" class="bg-[--bg-one] grid gap-8 px-[10%] py-10 items-center">
+        <div class="grid lg:row-span-2 gap-4 grid-rows-[min-content_1fr_min-content] justify-items-center lg:justify-items-start">
+            <h2 class="text-4xl lg:text-6xl text-center lg:text-start">Profesional <strong class=" text-[--primary-color-one]">Visual</strong> Content</h2>
+            <p class="text-center lg:text-start text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quod, debitis dolorem nostrum ipsam ab!</p>
+            <CallToActionCurrent href="#">Call To Action</CallToActionCurrent>
+        </div>
+        <VisualCard
+        title="Branding"
+        info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, eligendi."
+        href="/Branding.astro"
+        textBtn="Ver más"
+        >
+        <svg width="60" height="60" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M17.73 19.875a2.225 2.225 0 0 1 -1.948 1.125h-7.283a2.222 2.222 0 0 1 -1.947 -1.158l-4.272 -6.75a2.269 2.269 0 0 1 0 -2.184l4.272 -6.75a2.225 2.225 0 0 1 1.946 -1.158h7.285c.809 0 1.554 .443 1.947 1.158l3.98 6.75a2.33 2.33 0 0 1 0 2.25l-3.98 6.75v-.033z"></path>
+            <path d="M11.5 11.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0"></path>
+            <path d="M14 14l2 2"></path>
+         </svg>
+        </VisualCard>
+        <VisualCard
+        title="Graphic Design"
+        info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, eligendi."
+        href="/Branding.astro"
+        textBtn="Ver más"
+        >
+        <svg width="60" height="60" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 14m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"></path>
+            <path d="M17 14m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"></path>
+            <path d="M10 6m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"></path>
+            <path d="M10 8.5a6 6 0 0 0 -5 5.5"></path>
+            <path d="M14 8.5a6 6 0 0 1 5 5.5"></path>
+            <path d="M10 8l-6 0"></path>
+            <path d="M20 8l-6 0"></path>
+            <path d="M3 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+            <path d="M21 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+         </svg>
+        </VisualCard>
+         <VisualCard
+         title="Modeling 3D"
+         info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, eligendi."
+         href="/3D.astro"
+         textBtn="Ver más"
+         >
+         <svg width="60" height="60" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+             <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+             <path d="M7 9.5a.5 .5 0 0 1 .5 -.5h1a1.5 1.5 0 0 1 0 3h-.5h.5a1.5 1.5 0 0 1 0 3h-1a.5 .5 0 0 1 -.5 -.5"></path>
+             <path d="M14 9v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z"></path>
+          </svg>
+         </VisualCard>
+         <VisualCard
+        title="Photography & Video"
+        info="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        href="/Photography.astro"
+        textBtn="Ver más"
+        >
+        <svg width="60" height="60" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+            <path d="M3.6 15h10.55"></path>
+            <path d="M6.551 4.938l3.26 10.034"></path>
+            <path d="M17.032 4.636l-8.535 6.201"></path>
+            <path d="M20.559 14.51l-8.535 -6.201"></path>
+            <path d="M12.257 20.916l3.261 -10.034"></path>
+        </svg>
+        </VisualCard>
+    </section>
+
+<style>
+    #visual {
+        grid-auto-rows: 15rem;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        grid-auto-flow: dense;
+    }
+</style>
+

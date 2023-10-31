@@ -2,15 +2,15 @@
 const {title, info, href, textBtn} = Astro.props;
 ---
 
-<div class="w-full">
-    <div class=" min-w-[19rem] max-w-80 max-h-60 h-52 relative grid grid-cols-5 py-4 pr-4 pl-8 items-center ">
-        <picture class="absolute h-20 lg:h-full w-20 lg:w-full duration-300 z-20 lg:z-30 bg-[--primary-color-one] text-white flex items-center justify-center p-2">
+<div class="w-full rounded ">
+    <div class=" min-w-[19rem] max-w-[80%] mx-auto max-h-60 h-52 relative grid grid-cols-5 py-4 pr-4 pl-8 items-center rounded">
+        <picture class="absolute h-20 lg:h-full w-20 lg:w-full duration-300 z-20 lg:z-30 bg-[--primary-color-one] text-white flex items-center justify-center p-2 rounded-full lg:rounded">
             <slot >
         </picture>
         <h3 class="col-start-2 col-end-6 z-20 ml-1 text-xl font-semibold">{title}</h3>
         <p class="col-start-2 col-end-6 z-20 ml-1 mb-1">{info}</p>
         <a class="col-start-2 col-end-6 h-7 w-20 bg-[--primary-color-one] hover:bg-white text-white hover:text-[--primary-color-one] hover:outline-[--primary-color-one] hover:outline-2 hover:outline duration-300 text-sm font-light flex justify-center items-center rounded z-20 ml-1" href={href}>{textBtn}</a>
-        <span class="col-start-1 bg-white w-full h-full absolute z-10"></span>
+        <span class="col-start-1 bg-white w-full h-full absolute z-10 rounded"></span>
     </div>
 </div>
 
@@ -19,6 +19,7 @@ const {title, info, href, textBtn} = Astro.props;
         height: 80px;
         width: 80px;
         cursor: default;
+        border-radius: 50%;
     }
     
 </style>
